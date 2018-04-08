@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+     <link rel="stylesheet" href="css/jquery.fullPage.css">
+
+     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="css/xq_navbar.css" />
+     <link rel="stylesheet" type="text/css" href="css/default.css">
+     <link rel="stylesheet" href="css/demo.css">
+     <link rel="stylesheet" href="css/jquery.flipster.css">
+     <link rel="stylesheet" href="css/flipsternavtabs.css">
+     <link rel="stylesheet" href="css/index.css">
+    <!-- 导入jQuery库 -->
+	<script type="text/javascript" src='js/jquery-1.11.1.js'></script>
+	<!-- 导入fullpage插件 -->
+	<script type="text/javascript" src='js/jquery.fullPage.min.js'></script>
+	<script>
+		$(function(){
+			$('#dowebok').fullpage({
+				'navigation': true,
+				'slidesNavigation':true,
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+			    menu: '#menu'
+			});
+			setInterval(function(){
+                 $.fn.fullpage.moveSlideRight();
+            }, 3000);
+		});
+	</script>
+</head>
+
+<body>
+
+<div id="dowebok">
+	 <nav id="menu">
+		<div class="nav xq_bag" id="bar2">
+			<h1><img src="images/logo.png" /> </h1>
+			<ul class="xq_navbar">
+				<li data-menuanchor="page1" class="active xq_navli"><a href="#page1">网站首页</a></li>
+				<li data-menuanchor="page2" class="xq_navli"><a href="#page2">产品特点</a></li>
+				<li data-menuanchor="page3" class="xq_navli"><a href="#page3">新品展示</a></li>
+				<li data-menuanchor="page4" class="xq_navli"><a href="#page4">合作伙伴</a></li>
+				<li data-menuanchor="page5" class="xq_navli"><a href="#page5">新闻资讯</a></li>
+				<li data-menuanchor="page6" class="xq_navli"><a href="#page6">联系我们</a></li>
+			</ul>
+		</div>
+		<script src="js/xq_navbar.js"></script>
+		<script>
+			$(function() {
+				$("#bar1").xq_navbar({
+					"type": "underline",
+					"hcolor": "#ff2424"
+				});
+			});
+		</script>
+	</nav>
+	<div class="section section1">
+		 <div class="background">
+	         <div class="slide slide1"></div>
+			 <div class="slide slide2"></div>
+			 <div class="slide slide3"></div>
+			 <div class="slide slide4">
+			 	<p>Boots 用户交互的范式转移</p>
+			 	<h3>以Boots为中心的人机交互中</h3>
+			 </div>
+		 </div>
+	</div>
+	<div class="section section2">
+		<div class="tit">
+			<div class="sectionMax">
+						<div class="TitleEn">
+							<h2 class="">show</h2>
+							<font title="" class="">case</font>
+							<small class="">A turned and distance, <br> all the beauty in you out of the window</small>
+							<span class="">&nbsp;</span>
+						</div>
+						<div class="TitleCh">
+							<font title="" class="">样片展示</font>
+							<p class="">一个转身的距离，万千美景就在你的窗外。</p>
+							<span class="">&nbsp;</span>
+						</div>
+			</div>
+		</div>
+		<div class="section2_r">
+		    <!-- 代码部分begin -->
+			<div class="flipster">
+						<ul class="demo-2">
+							<li class="">
+
+								<a href="#" class="box Button Block sec_bg1">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="box Button Block sec_bg2">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="box Button Block sec_bg3">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="box Button Block sec_bg4">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="box Button Block sec_bg5">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="box Button Block sec_bg6">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="box Button Block sec_bg7">
+									<svg xmlns="http://www.w3.org/2000/svg">
+							            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							            <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						            </svg>
+									<h1></h1>
+									<p></p>
+								</a>
+							</li>
+						</ul>
+			</div>
+
+			<script src="js/jquery.flipster.js"></script>
+			<script>
+				$(function() {
+					$(".flipster").flipster({
+						style: 'carousel',
+						start: 0
+					});
+				});
+			</script>
+			<!-- 代码部分end -->
+		 </div>
+	</div>
+	<div class="section section3">
+		
+	</div>
+	<div class="section section4">
+		
+	</div>
+	<div class="section section5">
+		
+	</div>
+	<div class="section section6">
+		
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+     <link rel="stylesheet" href="css/jquery.fullPage.css">
+     <link rel="stylesheet" href="css/xq_navbar.css" />
+     <link rel="stylesheet" type="text/css" href="css/default.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+     <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="css/demo.css">
+     <link rel="stylesheet" href="css/jquery.flipster.css">
+     <link rel="stylesheet" href="css/flipsternavtabs.css">
+     <link rel="stylesheet" type="text/css" href="css/component.css" />
+     <link rel="stylesheet" media="screen" href="css/style.css">
+     <link rel="stylesheet" type="text/css" href="css/site.css">
+     <link rel="stylesheet" href="css/index.css">
+    <!-- 导入jQuery库 -->
+	<script type="text/javascript" src='js/jquery-1.11.1.js'></script>
+	<!-- 导入fullpage插件 -->
+	<script type="text/javascript" src='js/jquery.fullPage.js'></script>
+	<script src="js/jquery.bootstrap.newsbox.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			$('#dowebok').fullpage({
+				'navigation': true,
+				'slidesNavigation':true,
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+			    menu: '#menu',
+			    afterLoad:function(anchorLink,index){
+					if(index ==3){
+						$('.section2 .TitleEn').find('h2,font,small,span').animate({
+							'opacity':'1',
+							'top':'50px'
+						 },1000);
+						 $('.section2 .TitleCh').find('font,p,span').animate({
+							'opacity':'1',
+							'top':'50px'
+						 },1000);	
+					 }
+					 if(index ==4){
+						$('.section3 .TitleEn').find('h2,font,small,span').animate({
+							'opacity':'1',
+							'top':'50px'
+						 },1000);
+						 $('.section3 .TitleCh').find('font,p,span').animate({
+							'opacity':'1',
+							'top':'50px'
+						 },1000);	
+					 }
+					 if(index ==5){
+						$('.section5 .TitleEn').find('h2,font,small,span').animate({
+							'opacity':'1',
+							'top':'50px'
+						 },1000);
+						 $('.section5 .TitleCh').find('font,p,span').animate({
+							'opacity':'1',
+							'top':'50px'
+						 },1000);	
+					 }
+					 if(index ==6){
+						$('.section6').find('.left').animate({
+                             'right':'0'
+						 },500);
+						$('.section6').find('.right').animate({
+                             'left':'0'
+						 },500);
+						 $('#menu').css("background","rgba(43, 38, 35, 1)");
+					 }
+			    },
+			    onLeave: function(index,nextIndex, direction){
+					if(index == '3'){
+						$('.section2 .TitleEn').find('h2,font,small,span').animate({
+							'opacity':'0',
+							'top': '30px'
+						}, 1500);
+						$('.section2 .TitleCh').find('font,p,span').animate({
+							'opacity':'0',
+							'top': '30px'
+						 },1500);	
+					}
+					if(index == '4'){
+						$('.section3 .TitleEn').find('h2,font,small,span').animate({
+							'opacity':'0',
+							'top': '30px'
+						}, 1500);
+						$('.section3 .TitleCh').find('font,p,span').animate({
+							'opacity':'0',
+							'top': '30px'
+						 },1500);	
+					}
+					if(index == '5'){
+						$('.section5 .TitleEn').find('h2,font,small,span').animate({
+							'opacity':'0',
+							'top': '30px'
+						}, 1500);
+						$('.section5 .TitleCh').find('font,p,span').animate({
+							'opacity':'0',
+							'top': '30px'
+						 },1500);	
+					}
+					if(index ==6){
+						$('.section6').find('.left').animate({
+                             'right':'-120%'
+						 },500);
+						$('.section6').find('.right').animate({
+                             'left':'-120%'
+						 },500);
+						 $('#menu').css("background","rgba(43, 38, 35, 0.8)");
+					 }
+                }
+			});
+			// console.log($('.section2 .TitleEn').find('h2'));
+			
+		});
+		setInterval(function(){
+                 $.fn.fullpage.moveSlideRight();
+        }, 3000);
+	</script>
+</head>
+
+<body>
+
+<div id="dowebok">
+	 <nav id="menu">
+		<div class="nav xq_bag" id="bar2">
+			<h1><img src="images/logo.png" /> </h1>
+			<ul class="xq_navbar">
+				<li data-menuanchor="page1" class="active xq_navli"><a href="#page1">网站首页<span></span></a></li>
+				<li data-menuanchor="page2" class="xq_navli"><a href="#page2">产品特点<span></span></a></li>
+				<li data-menuanchor="page3" class="xq_navli"><a href="#page3">新品展示<span></span></a></li>
+				<li data-menuanchor="page4" class="xq_navli"><a href="#page4">相关应用<span></span></a></li>
+				<li data-menuanchor="page5" class="xq_navli"><a href="#page5">新闻资讯<span></span></a></li>
+				<li data-menuanchor="page6" class="xq_navli"><a href="#page6">联系我们<span></span></a></li>
+			</ul>
+		</div>
+		<script src="js/xq_navbar.js"></script>
+		<script>
+			$(function() {
+				$("#bar1").xq_navbar({
+					"type": "underline",
+					"hcolor": "#ff2424"
+				});
+			});
+		</script>
+	</nav>
+	<div class="section section1">
+		 <div class="background banner">
+		 	<div>
+		         <div class="slide slide1"> </div>
+				 <div class="slide slide2"></div>
+				 <div class="slide slide3"></div>
+				 <div class="slide slide4"></div>
+			</div>
+		 </div>
+	</div>
+	<div class="section section4">
+		<div id="particles-js">
+			<div class="section4-w">
+				<div class="apply1">
+					 <div class="apply1-t">
+					 	<div class="pure">
+					 		<div class="text">Kido</div>
+					 		<div class="imgpart">
+					 			<img src="images/sec4-2.png">
+					 			<div class="bg b1">
+					 				<span class="line1"></span>
+					 				<span class="line2"></span>
+					 				<span class="line3"></span>
+					 				<span class="line4"></span>
+					 				<p class="tit">Kido是一款儿童智能手表，基于图灵机器人智能引擎，Kido可为用户提供百科问答、四则运算等内容的查询指导，是小朋友随身的全能助手。</p>
+					 			</div>
+					 		</div>
+					 	</div>					 	
+					 </div>
+					 <div class="btm">
+					 	<img src="images/sec4-1.jpg" width="246px" height="333px">
+					 	<div class="bg b1">
+					 		<p class="tit">乐迪</p>
+                            <p class="con">乐迪是著名动画作品《超级飞侠》里的灵魂人物，基于图灵机器人人工智能操作系统Turing OS,让乐迪从荧幕走向现实</p>
+					 	</div>
+					 </div>
+				</div>
+				<div class="apply2">
+					 <div class="btm">
+					 	<img src="images/sec4-6.png" width="246px" height="333px">
+					 	<div class="bg">
+					 		<p class="tit">乐迪</p>
+                            <p class="con">乐迪是著名动画作品《超级飞侠》里的灵魂人物，基于图灵机器人人工智能操作系统Turing OS,让乐迪从荧幕走向现实</p>
+					 	</div>
+					 </div>
+					 <div class="apply2-t">
+					 	<div class="pure">
+					 		<div class="text" style="background: #9d948b;">腾讯微校</div>
+					 		<div class="imgpart">
+					 			<img src="images/sec4-2.png">
+					 			<div class="bg">
+					 				<span class="line1"></span>
+					 				<span class="line2"></span>
+					 				<span class="line3"></span>
+					 				<span class="line4"></span>
+					 				<p class="tit">Kido是一款儿童智能手表，基于图灵机器人智能引擎，Kido可为用户提供百科问答、四则运算等内容的查询指导，是小朋友随身的全能助手。</p>
+					 			</div>
+					 		</div>
+					 	</div>					 	
+					 </div>
+				</div>
+				<div class="apply3">
+					 <div class="apply3-t">
+					 	<div class="pure">
+					 		<div class="text" style="background: #fab568;">金蝶云之家</div>
+					 		<div class="imgpart">
+					 			<img src="images/sec4-2.png">
+					 			<div class="bg">
+					 				<span class="line1"></span>
+					 				<span class="line2"></span>
+					 				<span class="line3"></span>
+					 				<span class="line4"></span>
+					 				<p class="tit">Kido是一款儿童智能手表，基于图灵机器人智能引擎，Kido可为用户提供百科问答、四则运算等内容的查询指导，是小朋友随身的全能助手。</p>
+					 			</div>
+					 		</div>
+					 	</div>					 	
+					 </div>
+					 <div class="btm">
+					 	<img src="images/sec4-4.png">
+					 	<div class="bg">
+					 		<p class="tit">乐迪</p>
+                            <p class="con">乐迪是著名动画作品《超级飞侠》里的灵魂人物，基于图灵机器人人工智能操作系统Turing OS,让乐迪从荧幕走向现实</p>
+					 	</div>
+					 </div>
+				</div>
+				<div class="apply4">
+					<div class="btm">
+					 	<img src="images/sec4-8.jpg" width="246px" height="333px">
+					 	<div class="bg">
+					 		<p class="tit">乐迪</p>
+                            <p class="con">乐迪是著名动画作品《超级飞侠》里的灵魂人物，基于图灵机器人人工智能操作系统Turing OS,让乐迪从荧幕走向现实</p>
+					 	</div>
+					 </div>
+					<div class="apply4-t">
+					 	<div class="pure">
+					 		<div class="text" style="background: #57c1f5;">网易车小易</div>
+					 		<div class="imgpart">
+					 			<img src="images/sec4-2.png">
+					 			<div class="bg">
+					 				<span class="line1"></span>
+					 				<span class="line2"></span>
+					 				<span class="line3"></span>
+					 				<span class="line4"></span>
+					 				<p class="tit">Kido是一款儿童智能手表，基于图灵机器人智能引擎，Kido可为用户提供百科问答、四则运算等内容的查询指导，是小朋友随身的全能助手。</p>
+					 			</div>
+					 		</div>
+					 	</div>					 	
+					 </div>
+				</div>
+			</div>
+		</div>
+	<script src="js/particles.min.js"></script>
+	<script src="js/app.js"></script>
+	<script type="text/javascript" src="js/section4.js"></script>
+	</div>
+	<div class="section section2">
+		<div class="tit">
+			<div class="sectionMax">
+				<div class="TitleEn">
+							<h2 class="">show</h2>
+							<font title="" class="">case</font>
+							<small class="">A turned and distance, <br> all the beauty in you out of the window</small>
+							<span class="">&nbsp;</span>
+				</div>
+			    <div class="TitleCh">
+							<font title="" class="">样片展示</font>
+							<p class="">一个转身的距离，万千美景就在你的窗外。</p>
+							<span class="">&nbsp;</span>
+				</div>
+			</div>
+		</div>
+		<div class="section2_r">
+		    <!-- 代码部分begin -->
+			<div class="flipster">
+				<ul class="demo-2">
+					<li class="">
+						<a href="#" class="box Button Block sec_bg1">
+							<svg xmlns="http://www.w3.org/2000/svg">
+								<line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							    <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+								<line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+								<line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+							</svg>
+						    <h1></h1>
+						</a>
+				    </li>
+				    <li>
+					    <a href="#" class="box Button Block sec_bg2">
+						    <svg xmlns="http://www.w3.org/2000/svg">
+					            <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+					            <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+					            <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>						     <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						    </svg>
+							<h1></h1>
+							<p></p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="box Button Block sec_bg3">
+							<svg xmlns="http://www.w3.org/2000/svg">
+							    <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							    <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							    <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							    <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						    </svg>
+						    <h1></h1>
+							<p></p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="box Button Block sec_bg4">
+							<svg xmlns="http://www.w3.org/2000/svg">
+							    <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							    <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							    <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							    <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						    </svg>
+						    <h1></h1>
+						    <p></p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="box Button Block sec_bg5">
+							<svg xmlns="http://www.w3.org/2000/svg">
+							    <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							    <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							    <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							    <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						    </svg>
+							<h1></h1>
+							<p></p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="box Button Block sec_bg6">
+							<svg xmlns="http://www.w3.org/2000/svg">
+							    <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							    <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							    <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							    <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						    </svg>
+						    <h1></h1>
+							<p></p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="box Button Block sec_bg7">
+							<svg xmlns="http://www.w3.org/2000/svg">
+							    <line class="top" x1="0" y1="0" x2="1340" y2="0"/>
+							    <line class="left" x1="0" y1="450" x2="0" y2="-900"/>
+							    <line class="bottom" x1="460" y1="360" x2="-900" y2="360"/>
+							    <line class="right" x1="460" y1="0" x2="460" y2="1340"/>
+						    </svg>
+							<h1></h1>
+							<p></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<script src="js/jquery.flipster.js"></script>
+			<script>
+				$(function() {
+					$(".flipster").flipster({
+						style: 'carousel',
+						start: 0
+					});
+				});
+			</script>
+			<!-- 代码部分end -->
+		 </div>
+	</div>
+	<div class="section section3">
+				<div class="tit">
+					<div class="sectionMax">
+						<div class="TitleEn">
+							<h2 class="">formal</h2>
+							<font title="" class="">dress</font> <small class="">Direct international <br>
+                and domestic a line brand</small> <span class="">&nbsp;</span> </div>
+						<div class="TitleCh">
+							<font title="" class="">品牌礼服</font>
+							<p class="">直选国际国内一线大牌</p>
+							<span class="">&nbsp;</span> </div>
+					</div>
+				</div>
+				<div class="section3_r">
+					<div class="slide slide1">
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-1.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>欧式婚纱照</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>想拍婚纱照的新人们是不是还在考虑怎么拍婚纱照呢，其实也不难;看到别人拥有美丽的婚纱是不是很羡慕呢</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-3.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>坏天气里拍出好看的婚纱照</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>一个女孩子，一生之中也许只有结婚这一刻才能做次真正的主角，婚纱照是她名正言顺肆意美丽的一个机会。除非你没准备跟她过一辈子，否则为了你的耳根清净也为了她小小的幸福你也不能说个“不”字</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-2.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>拍出完美的婚纱照</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>新娘子想要自己在拍婚纱照时更加楚楚动人，一定要掌握一些化妆以及利用婚纱礼服装饰自己的技巧。那么，拍婚纱照如何利用婚纱细节呢?</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-4.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>拍婚纱照前后的注意事项</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>明天就是11.11，相信不少朋友都想脱单了吧，正在谈恋爱的也都是奔着结婚去的准新人们谈论得最多的当然要数拍婚纱照了!</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide slide2">
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-5.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>新人如何挑选黄金首饰?</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>随着生活水平的提高，黄金饰品已经普遍的进入人们的生活。尤其是准新人。但是现在黄金市场假黄金、纯度不高的黄金屡见不鲜。你知道如何鉴别黄金饰品的真假吗?</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-6.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>实用新娘化妆技巧</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>每个人得婚礼只有一次,新娘怎么才能在这重要得日子HOID住全场,向来宾展示最美得自己,化妆这个环节必不可少</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-7.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>肌肤从洗脸开始</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>好肌肤要从清洁开始，都说清洁是护肤的基础，这点真没错，肌底干净通畅，后续保养品吸收好，肤质才能棒棒哒!但洗脸可没那么简单</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-8.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>冬天拍婚纱照好看吗</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>冬季相对还是比较寒冷的，对于年底婚期想要拍婚纱照的新人来说，这个季节最大的困难就是天气，我们会质疑北京冬天能拍婚纱照吗?</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide slide3">
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-6.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>个人写真拍照前注意事项</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>很多人喜欢拍摄个人写真，保留下自己最美好的一面！今天唯你婚纱摄影技术小编就为您总结一下个人写真照拍摄前注意事项。</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-8.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>拍婚纱前眼部如何保养？</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>很多人都希望在拍摄婚纱照的时候自己做到最完美！将自己最好的一面长久的保存下来。但是有很多人在平时的时候不注意眼部保养所以很多人的眼部多少都会有一下小的缺憾！</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-2.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>如何做到婚纱照内景上镜？</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>对于婚纱照的内景，在拍摄的时候通过某些小技巧可以让我们更加上镜！今天唯你婚纱照技术小编就为您介绍几种小技巧！</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="single-member effect-3">
+							<div class="member-image">
+								<img src="images/sec2-1.jpg" height="320px">
+							</div>
+							<div class="member-info">
+								<h3>不同肤色如何挑选婚纱？</h3>
+								<h5>唯你婚纱摄影</h5>
+								<p>现在拍摄婚纱照是一个多种元化多种风格的时代！在婚纱摄影楼挑选婚纱照风格时，总是能让人们眼花缭乱！那么什么风格时候我们呢？什么样的婚纱更适合我们的肤色呢？</p>
+								<div class="social-touch">
+									<a class="more" href="#">more+</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="background:#DADCDC; height: 80px; width: 810px; position: absolute;z-index: 200; ">						
+					</div>
+				</div>
+	</div>	
+	<div class="section section5">
+		<div class="tit">
+			<div class="sectionMax">
+				<div class="TitleEn">
+					<h2 class="">news</h2>
+					<font title="" class="">center</font> <small class="" style="color: white;">Derived from <br>
+                the bible promise: all for one crazy</small> <span class="">&nbsp;</span>
+                </div>
+				<div class="TitleCh">
+					<font title="" class="" style="color: white;">新闻中心</font>
+					<p class="" style="color: white;">源自圣经的承诺：只为一人疯狂。</p>
+					<span class="">&nbsp;</span> 
+				</div>
+			</div>
+		</div>
+        <div class="section5_r">
+			<div class="htmleaf-container">
+			    <div class="container mp30">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class="glyphicon glyphicon-list-alt" style="font-size: 14px; top: -36px;"></span><b class="b">行业动态</b>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+									     <div class="col-xs-12">
+											<ul class="demo2">
+												<li class="news-item">
+													<p>好肌肤要从清洁开始，都说清洁是护肤的基础，这点真没错... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>很多人喜欢拍摄个人写真，保留下自己最美好的一面！今天 北京婚纱摄影... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>对于婚纱照的内景，在拍摄的时候通过某些小技巧可以让我们更加上镜！... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>现在拍摄婚纱照是一个多种元化多种风格的时代！在婚纱摄影楼挑选婚纱照... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>婚礼上不仅仅只是新郎新娘的装扮重要！而在其身边伴郎伴娘也是需要精... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>现在小清新婚纱照已经获得了 N 多新人的芳心，现在小清新婚纱照我们怎么才... </p><a href="#">Read more...</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+						    </div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class="glyphicon glyphicon-list-alt" style="font-size: 14px; top: -36px;"></span><b class="b">企业新闻</b>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-xs-12">
+											<ul class="demo2">
+												<li class="news-item">
+													<p>好肌肤要从清洁开始，都说清洁是护肤的基础，这点真没错... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>很多人喜欢拍摄个人写真，保留下自己最美好的一面！今天 北京婚纱摄影... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>对于婚纱照的内景，在拍摄的时候通过某些小技巧可以让我们更加上镜！... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>现在拍摄婚纱照是一个多种元化多种风格的时代！在婚纱摄影楼挑选婚纱照... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>婚礼上不仅仅只是新郎新娘的装扮重要！而在其身边伴郎伴娘也是需要精... </p><a href="#">Read more...</a></li>
+												<li class="news-item">
+													<p>现在小清新婚纱照已经获得了 N 多新人的芳心，现在小清新婚纱照我们怎么才... </p><a href="#">Read more...</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<script type="text/javascript">
+		$(function() {
+			$(".demo2").bootstrapNews({
+				newsPerPage: 5,
+				autoplay: true,
+				pauseOnHover: true,
+				navigation: false,
+				direction: 'down',
+				newsTickerInterval: 4000,
+			});
+		});
+	    </script>	
+		</div>			
+	</div>	
+	<div class="section section6">
+		<div class="left">
+			<div class="section6-l">
+				 <ul class="left-top">
+					<li style="font-size: 30px; margin-bottom: 30px;">联系我们</li>
+					<span style="width:100px; height: 2px; background:#D62010; display: block;position: absolute; right: 0;"></span>
+					<li style="height: 80px; line-height: 80px;">Contant Us</li>
+				</ul>
+				<ul class="left-bottom"> 
+					<li>中国地区XX分区5A写字楼8-88号</li>
+					<li style="font-size: 14px; height: 64px; line-height: 64px;">ADD：Building B1,No.1,Disheng West Road Beijing</li>
+					<span style="width:360px; height: 1px; background:#928F8F; display: block;position: absolute; right: 0;"></span>
+					<li style="height: 64px; line-height: 64px;">官方热线：666-888-8888</li>
+					<li>Email:1234566666@qq.com</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div id="container2" class="container-last"></div>
+		</div>
+		<script src="http://api.map.baidu.com/api?v=2.0&ak=A1LU7iHS0avqQwPLAxbhKn0UYSQCuRVH"></script>
+		<script src="js/jquery.baiduMap.min.js"></script>
+		<script type="text/javascript">
+			new BaiduMap({
+				id: "container2",
+				title: {
+					text: "郑州市创业中心",
+					className: "title"
+				},
+				content: {
+					className: "content",
+					text: ["地址：河南省郑州市中原区瑞达路", "电话：(010)65131892"]
+				},
+				point: {
+					lng: 113.65,
+					lat: 34.76
+				},
+				level: 20,
+				zoom: true,
+				width: 280,
+				height: 70,
+				'font-size':'14px',
+				icon: {
+					url: "images/icon.png",
+					width: 36,
+					height: 36
+				}
+			});
+		</script>
+	</div>
+</div>
+
+
+</body>
+</html>
